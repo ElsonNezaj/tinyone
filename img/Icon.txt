@@ -1,0 +1,3 @@
+icon fa - apple
+icon fa - android
+icon fa - windows
