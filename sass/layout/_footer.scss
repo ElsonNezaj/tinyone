@@ -1,0 +1,41 @@
+.footer {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: $color-secondary;
+    font-size: 1.4rem;
+}
+
+.footer_content {
+    @include center;
+    background-color: $color-secondary;
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    justify-items: center;
+    gap: 1.5rem;
+}
+
+.address {
+
+    p {
+        color: white;
+    }
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    a:link,
+    a:visited {
+        color: white;
+        text-decoration: none;
+        transition: all .2s;
+    }
+
+    a:hover,
+    a:active {
+        color: $color-primary;
+        transform: translateY(-1px);
+    }
+}

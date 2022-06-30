@@ -1,0 +1,22 @@
+.features {
+    @include center;
+    padding: 15rem 0;
+
+    h1 {
+        text-align: center;
+        letter-spacing: 0.1rem;
+    }
+
+    &_p {
+        text-align: center;
+        color: $paragraph-text-light;
+    }
+}
+
+.features_grid {
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    row-gap: 5rem;
+    column-gap: 7rem;
+}

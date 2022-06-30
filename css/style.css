@@ -28,7 +28,8 @@ body {
 /*Header Section*/
 .header {
   background-color: #fcdb00;
-  height: 100vh; }
+  height: 100vh;
+  width: 100%; }
   .header .main {
     width: 120rem;
     margin: 0 auto;
@@ -72,11 +73,6 @@ body {
       color: #fff;
       transform: translateY(-3px); }
 
-.features {
-  width: 120rem;
-  margin: 0 auto;
-  padding-top: 20rem; }
-
 /*Hero Section*/
 .hero {
   width: 120rem;
@@ -110,6 +106,99 @@ body {
     width: 40rem;
     height: auto; }
 
+.features {
+  width: 120rem;
+  margin: 0 auto;
+  padding: 15rem 0; }
+  .features h1 {
+    text-align: center;
+    letter-spacing: 0.1rem; }
+  .features_p {
+    text-align: center;
+    color: #7c7c7c; }
+
+.features_grid {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  row-gap: 5rem;
+  column-gap: 7rem; }
+
+.cta {
+  background-color: #010101;
+  padding: 10rem; }
+  .cta_title {
+    color: #fcdb00;
+    text-align: center;
+    margin-bottom: 3rem; }
+  .cta_paragraph {
+    color: #989797;
+    text-align: center; }
+
+.call {
+  width: 120rem;
+  margin: 0 auto; }
+
+.social {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem; }
+  .social a:link,
+  .social a:visited {
+    font-size: 3rem;
+    text-decoration: none;
+    color: #fcdb00;
+    transition: all .2s; }
+  .social a:hover,
+  .social a:active {
+    color: white;
+    transform: translateY(-3px) scale(1.1); }
+
+.footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #010101;
+  font-size: 1.4rem; }
+
+.footer_content {
+  width: 120rem;
+  margin: 0 auto;
+  background-color: #010101;
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  justify-items: center;
+  gap: 1.5rem; }
+
+.address p {
+  color: white; }
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem; }
+  .links a:link,
+  .links a:visited {
+    color: white;
+    text-decoration: none;
+    transition: all .2s; }
+  .links a:hover,
+  .links a:active {
+    color: #fcdb00;
+    transform: translateY(-1px); }
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 2rem; }
+  .feature_icon {
+    font-size: 5rem;
+    transform: translateY(-25%);
+    grid-row: 1/3;
+    justify-self: end; }
+  .feature_text {
+    grid-column: 2/3; }
+
 .visual {
   position: relative; }
   .visual .carousel {
@@ -136,3 +225,43 @@ body {
         width: 1.8rem;
         height: 1.8rem;
         filter: brightness(100%); }
+
+.ctaform {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem; }
+  .ctaform_email {
+    border: none;
+    border-radius: none;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    width: 75%;
+    padding: 1.5rem 7rem 1.5rem 2rem;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    transition: all .3s; }
+    .ctaform_email:focus:invalid {
+      outline: none;
+      border-bottom: 5px solid #d44343;
+      font-size: 1.6rem; }
+    .ctaform_email:focus {
+      outline: none;
+      border-bottom: 5px solid #fcdb00;
+      font-size: 1.6rem; }
+    .ctaform_email::placeholder {
+      vertical-align: middle;
+      font-size: 1.6rem; }
+  .ctaform_button {
+    width: 10%;
+    border: none;
+    border-radius: 5px;
+    background-color: #fcdb00;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .2s; }
+    .ctaform_button:hover {
+      background-color: white;
+      color: #b09900; }

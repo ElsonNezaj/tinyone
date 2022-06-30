@@ -1,0 +1,52 @@
+.ctaform {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+
+    &_email {
+        border: none;
+        border-radius: none;
+        background-color: white;
+        border-radius: 5px;
+        font-size: 1.6rem;
+        width: 75%;
+        padding: 1.5rem 7rem 1.5rem 2rem;
+        border-bottom: 5px solid transparent;
+        border-top: 5px solid transparent;
+        transition: all .3s;
+
+        &:focus:invalid {
+            outline: none;
+            border-bottom: 5px solid rgb(212, 67, 67);
+            font-size: 1.6rem;
+        }
+
+        &:focus {
+            outline: none;
+            border-bottom: 5px solid $color-primary;
+            font-size: 1.6rem;
+        }
+
+        &::placeholder {
+            vertical-align: middle;
+            font-size: 1.6rem;
+        }
+    }
+
+    &_button {
+        width: 10%;
+        border: none;
+        border-radius: 5px;
+        background-color: $color-primary;
+        font-family: inherit;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+            background-color: white;
+            color: #b09900;
+        }
+    }
+}
