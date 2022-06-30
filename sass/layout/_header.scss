@@ -1,0 +1,77 @@
+/****************************************
+/*Header Section*/
+
+.header {
+    background-color: $color-primary;
+    height: 100vh;
+
+    .main {
+        width: 120rem;
+        margin: 0 auto;
+        padding-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        justify-content: space-between;
+    }
+
+    .nav {
+        justify-self: start;
+
+        &_logo {
+
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            &-img {
+                width: 4.5rem;
+                height: 4.5rem;
+            }
+
+            &-text {
+                font-size: 2.3rem;
+                font-family: 'Noto Sans', sans-serif;
+                font-weight: 600;
+                text-align: center;
+                filter: blur(0.03rem);
+            }
+        }
+    }
+
+    .navigation {
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        &_list {
+            list-style: none;
+            font-size: 1.8rem;
+            font-weight: 600;
+            filter: blur(0.03rem);
+            display: flex;
+            gap: 10rem;
+        }
+
+        &_link:link,
+        &_link:visited {
+            display: inline-block;
+            color: $color-secondary;
+            text-decoration: none;
+            transition: all .2s;
+        }
+
+        &_link:hover,
+        &_link:active {
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+
+    }
+}
+
+.features {
+    @include center;
+    padding-top: 20rem;
+}
