@@ -1,4 +1,267 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: inherit;
+  scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.6rem; }
+
+.heading-1 {
+  font-family: sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700; }
+
+.heading-3 {
+  font-family: sans-serif;
+  font-size: 2.3rem;
+  font-weight: 400; }
+
+/****************************************
+/*Header Section*/
 .header {
-  background-color: pink; }
-  .header_title {
-    font-size: 32px; }
+  background-color: #fcdb00;
+  height: 100vh;
+  width: 100%; }
+  .header .main {
+    width: 120rem;
+    margin: 0 auto;
+    padding-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    justify-content: space-between; }
+  .header .nav {
+    justify-self: start; }
+    .header .nav_logo {
+      display: flex;
+      align-items: center;
+      gap: 2rem; }
+      .header .nav_logo-img {
+        width: 4.5rem;
+        height: 4.5rem; }
+      .header .nav_logo-text {
+        font-size: 2.3rem;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 600;
+        text-align: center;
+        filter: blur(0.03rem); }
+  .header .navigation {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+    .header .navigation_list {
+      list-style: none;
+      font-size: 1.8rem;
+      font-weight: 600;
+      filter: blur(0.03rem);
+      display: flex;
+      gap: 10rem; }
+    .header .navigation_link:link, .header .navigation_link:visited {
+      display: inline-block;
+      color: #010101;
+      text-decoration: none;
+      transition: all .2s; }
+    .header .navigation_link:hover, .header .navigation_link:active {
+      color: #fff;
+      transform: translateY(-3px); }
+
+/*Hero Section*/
+.hero {
+  width: 120rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  align-items: center; }
+  .hero_title {
+    margin-bottom: 3rem; }
+  .hero_sub {
+    margin-bottom: 3rem;
+    color: #232323; }
+  .hero_p {
+    margin-bottom: 4rem;
+    font-weight: 300; }
+  .hero .device {
+    display: flex;
+    gap: 6rem; }
+    .hero .device_icon {
+      font-size: 4rem;
+      display: inline-block;
+      transition: all .2s; }
+    .hero .device_icon:hover {
+      color: white;
+      transform: translateY(-3px); }
+
+.hero_illu {
+  justify-self: end; }
+  .hero_illu .hero_img {
+    width: 40rem;
+    height: auto; }
+
+.features {
+  width: 120rem;
+  margin: 0 auto;
+  padding: 15rem 0; }
+  .features h1 {
+    text-align: center;
+    letter-spacing: 0.1rem; }
+  .features_p {
+    text-align: center;
+    color: #7c7c7c; }
+
+.features_grid {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  row-gap: 5rem;
+  column-gap: 7rem; }
+
+.cta {
+  background-color: #010101;
+  padding: 10rem; }
+  .cta_title {
+    color: #fcdb00;
+    text-align: center;
+    margin-bottom: 3rem; }
+  .cta_paragraph {
+    color: #989797;
+    text-align: center; }
+
+.call {
+  width: 120rem;
+  margin: 0 auto; }
+
+.social {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem; }
+  .social a:link,
+  .social a:visited {
+    font-size: 3rem;
+    text-decoration: none;
+    color: #fcdb00;
+    transition: all .2s; }
+  .social a:hover,
+  .social a:active {
+    color: white;
+    transform: translateY(-3px) scale(1.1); }
+
+.footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #010101;
+  font-size: 1.4rem; }
+
+.footer_content {
+  width: 120rem;
+  margin: 0 auto;
+  background-color: #010101;
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  justify-items: center;
+  gap: 1.5rem; }
+
+.address p {
+  color: white; }
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem; }
+  .links a:link,
+  .links a:visited {
+    color: white;
+    text-decoration: none;
+    transition: all .2s; }
+  .links a:hover,
+  .links a:active {
+    color: #fcdb00;
+    transform: translateY(-1px); }
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 2rem; }
+  .feature_icon {
+    font-size: 5rem;
+    transform: translateY(-25%);
+    grid-row: 1/3;
+    justify-self: end; }
+  .feature_text {
+    grid-column: 2/3; }
+
+.visual {
+  position: relative; }
+  .visual .carousel {
+    margin-top: 8rem;
+    display: flex;
+    gap: 3rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    .visual .carousel_white {
+      width: 1.8rem;
+      height: 1.8rem;
+      background-color: white;
+      border-radius: 50%;
+      transition: all .2s;
+      cursor: pointer; }
+      .visual .carousel_white--2 {
+        background-color: white;
+        width: 1.5rem;
+        height: 1.5rem;
+        filter: brightness(90%); }
+      .visual .carousel_white--2:hover {
+        width: 1.8rem;
+        height: 1.8rem;
+        filter: brightness(100%); }
+
+.ctaform {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem; }
+  .ctaform_email {
+    border: none;
+    border-radius: none;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    width: 75%;
+    padding: 1.5rem 7rem 1.5rem 2rem;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    transition: all .3s; }
+    .ctaform_email:focus:invalid {
+      outline: none;
+      border-bottom: 5px solid #d44343;
+      font-size: 1.6rem; }
+    .ctaform_email:focus {
+      outline: none;
+      border-bottom: 5px solid #fcdb00;
+      font-size: 1.6rem; }
+    .ctaform_email::placeholder {
+      vertical-align: middle;
+      font-size: 1.6rem; }
+  .ctaform_button {
+    width: 10%;
+    border: none;
+    border-radius: 5px;
+    background-color: #fcdb00;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .2s; }
+    .ctaform_button:hover {
+      background-color: white;
+      color: #b09900; }
