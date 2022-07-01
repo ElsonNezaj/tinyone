@@ -2,7 +2,9 @@
 /*Header Section*/
 
 .header {
+
     background-color: $color-primary;
+
 
     @media only screen and (max-width: $bp-largest) {
         width: 130rem;
@@ -19,6 +21,7 @@
     }
 
     .main {
+        position: relative;
         margin: 0 auto;
         width: 120rem;
         background-color: $color-primary;
@@ -26,6 +29,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
         justify-content: space-between;
+
 
         @media only screen and (max-width: $bp-largest) {
             width: 100%;
@@ -40,6 +44,8 @@
 
         @media only screen and (max-width: $bp-small) {
             width: 100%;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-content: center;
         }
 
     }
@@ -73,6 +79,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        transition: all .3s;
 
         &_list {
             list-style: none;
@@ -84,6 +91,21 @@
 
             @media only screen and (max-width: $bp-small) {
                 gap: 7rem;
+                z-index: 200;
+                flex-direction: column;
+                position: absolute;
+                vertical-align: middle;
+                justify-content: center;
+                align-items: center;
+                height: 85vh;
+                top: 0%;
+                left: 0%;
+                background-color: $color-secondary;
+                width: 100%;
+                color: $color-primary;
+                opacity: 0%;
+                visibility: hidden;
+                transition: all .3s;
             }
 
             @media only screen and (max-width: $bp-smallest) {
@@ -97,14 +119,84 @@
             color: $color-secondary;
             text-decoration: none;
             transition: all .2s;
+
+            @media only screen and (max-width: $bp-small) {
+                color: $color-primary;
+                font-size: 4rem;
+                border-bottom: 2px solid $color-primary;
+            }
         }
 
         &_link:hover,
         &_link:active {
             color: #fff;
             transform: translateY(-3px);
+            border-bottom: 2px solid #fff;
         }
 
 
+    }
+}
+
+.navigation_button {
+    font-size: 5rem;
+    border: none;
+    background-color: $color-primary;
+    position: absolute;
+    left: 50%;
+    top: -100%;
+    cursor: pointer;
+    display: none;
+    z-index: 1;
+    grid-column: 3/4;
+
+    @media only screen and (max-width: $bp-small) {
+        display: block;
+        top: 50%;
+        left: 100%;
+        justify-self: end;
+    }
+
+    &:hover {
+        color: white;
+    }
+
+}
+
+.navigation_button:focus+.navigation_list {
+    opacity: 90%;
+    visibility: visible;
+}
+
+.navigation_button:focus~.navigation_list {
+    opacity: 90%;
+    visibility: visible;
+}
+
+.navigation_button:focus~button {
+    visibility: hidden;
+    opacity: 0%;
+}
+
+
+.navigation_list {
+    position: relative;
+}
+
+.navigation_close {
+    border: none;
+    font-size: 8rem;
+    background-color: inherit;
+    color: $color-primary;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transition: all .2s;
+    opacity: 0%;
+    visibility: hidden;
+    z-index: 1000;
+
+    &:active {
+        color: #fff;
     }
 }
