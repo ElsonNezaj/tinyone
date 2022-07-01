@@ -163,12 +163,13 @@ body {
           vertical-align: middle;
           justify-content: center;
           align-items: center;
-          height: 85vh;
+          height: 100vh;
           top: 0%;
-          left: 0%;
+          right: -5rem;
           background-color: #010101;
-          width: 100%;
+          width: 50%;
           color: #fcdb00;
+          transform: translateX(100rem);
           opacity: 0%;
           visibility: hidden;
           transition: all .3s; } }
@@ -183,12 +184,10 @@ body {
       @media only screen and (max-width: 56.25em) {
         .header .navigation_link:link, .header .navigation_link:visited {
           color: #fcdb00;
-          font-size: 4rem;
-          border-bottom: 2px solid #fcdb00; } }
+          font-size: 4rem; } }
     .header .navigation_link:hover, .header .navigation_link:active {
       color: #fff;
-      transform: translateY(-3px);
-      border-bottom: 2px solid #fff; }
+      transform: translateY(-3px); }
 
 .navigation_button {
   font-size: 5rem;
@@ -211,12 +210,14 @@ body {
     color: white; }
 
 .navigation_button:focus + .navigation_list {
-  opacity: 90%;
-  visibility: visible; }
+  opacity: 100%;
+  visibility: visible;
+  transform: translateX(0); }
 
 .navigation_button:focus ~ .navigation_list {
-  opacity: 90%;
-  visibility: visible; }
+  opacity: 100%;
+  visibility: visible;
+  transform: translateX(0); }
 
 .navigation_button:focus ~ button {
   visibility: hidden;
@@ -239,6 +240,16 @@ body {
   z-index: 1000; }
   .navigation_close:active {
     color: #fff; }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #fff;
+  width: 100%;
+  z-index: 3000; }
 
 /*Hero Section*/
 .section-hero {
@@ -486,3 +497,32 @@ body {
     .ctaform_button:hover {
       background-color: white;
       color: #b09900; }
+
+.carosel {
+  background-color: #fcdb00;
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .carosel {
+      display: none; } }
+  .carosel_item {
+    background-color: white;
+    filter: brightness(90%);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    transition: all .3s; }
+    .carosel_item--1:hover {
+      background-color: white;
+      transform: scale(1.1);
+      filter: brightness(100%); }
+    .carosel_item--2:hover {
+      background-color: white;
+      transform: scale(1.1);
+      filter: brightness(100%); }
+    .carosel_item--3:hover {
+      background-color: white;
+      transform: scale(1.1);
+      filter: brightness(100%); }

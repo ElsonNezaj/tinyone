@@ -1,0 +1,38 @@
+.carosel {
+    background-color: $color-primary;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+        display: none;
+    }
+
+    &_item {
+        background-color: white;
+        filter: brightness(90%);
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        transition: all .3s;
+
+        &--1:hover {
+            background-color: white;
+            transform: scale(1.1);
+            filter: brightness(100%);
+        }
+
+        &--2:hover {
+            background-color: white;
+            transform: scale(1.1);
+            filter: brightness(100%);
+        }
+
+        &--3:hover {
+            background-color: white;
+            transform: scale(1.1);
+            filter: brightness(100%);
+        }
+    }
+}
