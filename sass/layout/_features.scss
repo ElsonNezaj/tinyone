@@ -2,21 +2,54 @@
     @include center;
     padding: 15rem 0;
 
+    @media only screen and (max-width: $bp-largest) {
+        width: 130rem;
+        padding: 15rem 10rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {}
+
+    @media only screen and (max-width: $bp-small) {
+        width: 100%;
+        padding-top: 5rem;
+    }
+
+
     h1 {
         text-align: center;
         letter-spacing: 0.1rem;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-bottom: 3rem;
+        }
     }
 
     &_p {
         text-align: center;
         color: $paragraph-text-light;
     }
-}
 
-.features_grid {
-    margin-top: 10rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    row-gap: 5rem;
-    column-gap: 7rem;
+    .features_grid {
+        margin-top: 10rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        row-gap: 5rem;
+        column-gap: 7rem;
+
+        @media only screen and (max-width: $bp-large) {
+            grid-template-columns: 50rem 50rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 70%;
+            justify-content: center;
+            column-gap: 5rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            grid-template-columns: 1fr;
+            justify-content: center;
+            margin-top: 5rem;
+        }
+    }
 }

@@ -1,23 +1,61 @@
 .footer {
+    margin: 0 auto;
     padding-top: 5rem;
     padding-bottom: 5rem;
     background-color: $color-secondary;
     font-size: 1.4rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        width: 130rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
 }
 
 .footer_content {
-    @include center;
     background-color: $color-secondary;
     display: grid;
     grid-template-columns: 2fr repeat(4, 1fr);
     justify-items: center;
     gap: 1.5rem;
+
+    @media only screen and (max-width: $bp-large) {
+        gap: .5rem;
+        grid-template-columns: 2fr repeat(4, 1fr);
+    }
 }
 
 .address {
 
-    p {
+    p,
+    a {
         color: white;
+    }
+
+    a {
+        display: block;
+        cursor: pointer;
+    }
+
+    &_text--email,
+    &_text-number {
+        color: white;
+    }
+
+    a:hover,
+    a:visited,
+    &_text--email:hover,
+    &_text-number:hover {
+        color: $color-primary;
+        transform: translateY(-1px);
     }
 }
 

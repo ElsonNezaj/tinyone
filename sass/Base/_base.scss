@@ -10,9 +10,42 @@ html {
     font-size: 62.5%;
     box-sizing: inherit;
     scroll-behavior: smooth;
+
+    @media only screen and (max-width:$bp-large) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width:$bp-small) {
+        font-size: 45%;
+    }
 }
 
 body {
     font-family: 'Noto Sans', sans-serif;
     font-size: 1.6rem;
+
+    @media only screen and (max-width:$bp-smaller) {
+        width: max-content;
+    }
+
+    @media only screen and (max-width:$bp-small) {
+        width: 100%;
+
+    }
+}
+
+.container {
+    width: 100%;
+
+    @media only screen and (max-width:$bp-large) {
+        width: 100%;
+    }
+
+    @media only screen and (max-width:$bp-smaller) {
+        width: max-content;
+    }
+
+    @media only screen and (max-width:$bp-small) {
+        width: 100%;
+    }
 }
