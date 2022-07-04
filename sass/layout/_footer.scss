@@ -18,6 +18,11 @@
         padding-left: 5rem;
         padding-right: 5rem;
     }
+
+
+    @media only screen and (max-width: $bp-smallest) {
+        width: 100%;
+    }
 }
 
 .footer_content {
